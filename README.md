@@ -1,5 +1,5 @@
 <h1 align="center">
-    React Course - IO [2023]
+    React Course - II [2023]
 </h1>
 
 <h4 align="center">
