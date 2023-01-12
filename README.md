@@ -51,10 +51,10 @@
 <p>
     <ul>
         <li>
-            <a href="https://github.com/hozlucas28/JS-Complementary-Course-2023" target="_blank">Repository of JS complementary course</a>
+            <a href="https://github.com/hozlucas28/React-Course-I-2023" target="_blank">Repository of React - I course</a>
         </li>
         <li>
-            <a href="https://github.com/hozlucas28/React-Course-I-2023" target="_blank">Repository of React - I course</a>
+            <a href="https://github.com/hozlucas28/JS-Complementary-Course-2023" target="_blank">Repository of JS complementary course</a>
         </li>
         <li>
             <a href="https://github.com/hozlucas28/React-Shopping-Cart-Practice-2023" target="_blank">Repository of shopping cart practice</a>
