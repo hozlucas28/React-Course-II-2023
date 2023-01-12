@@ -1,29 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+/* --------------------------------------------------------------------------
+ * APUNTES:
+ * 		   XXX.
+ *
+ *
+ * IMPORTANTE:
+ *  			  - <useRef> = Me permite referenciar el componente.
+-------------------------------------------------------------------------- */
 
-function App() {
+import { useRef } from 'react';
+
+const App = () => {
+	const ref = useRef();
+	const inputRef = useRef();
+
+	const onClick = () => {
+		console.log(ref.current);
+	};
+
+	const focus = () => {
+		inputRef.current.focus();
+	};
+
 	return (
-		<div className="App">
-			<header className="App-header">
-				<img
-					src={logo}
-					className="App-logo"
-					alt="logo"
-				/>
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
+		<div>
+			<input ref={inputRef} />
+			<button onClick={focus}>Focus</button>
+			<div
+				onClick={onClick}
+				ref={ref}
+			>
+				¡Hola Mundo!
+			</div>
 		</div>
 	);
-}
+};
 
 export default App;
