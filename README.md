@@ -62,6 +62,9 @@
         <li>
             <a href="https://github.com/hozlucas28/React-Shopping-Cart-Practice-2023" target="_blank">Repository of shopping cart practice</a>
         </li>
+        <li>
+            <a href="https://github.com/hozlucas28/React-User-Manager-Practice-2023" target="_blank">Repository of user manager practice</a>
+        </li>
     </ul>
 </p>
 
