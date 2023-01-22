@@ -1,8 +1,4 @@
 /* --------------------------------------------------------------------------
- * APUNTES:
- * 		   XXX.
- *
- *
  * IMPORTANTE:
  *  			  - <useEffect()> = Se ejecuta cada vez que las dependencias,
  * 									pasadas a través del arreglo, han sido
@@ -12,6 +8,7 @@
 
 import { useState, useEffect, Component } from 'react';
 
+// Hook del tipo <useState>
 const useCounter = (start) => {
 	const [counter, setCounter] = useState(start);
 
@@ -22,15 +19,7 @@ const useCounter = (start) => {
 	return [counter, increase];
 };
 
-// const Interval = ({ counter }) => {
-// 	useEffect(() => {
-// 		const i = setInterval(() => console.log(counter), 1000);
-// 		return () => clearInterval(i); // Se desuscribe el intervalo cuando la dependencia cambia.
-// 	}, [counter]);
-
-// 	return <p>Intervalo</p>;
-// };
-
+// Componente de clase
 class Interval extends Component {
 	interval = '';
 
@@ -47,6 +36,17 @@ class Interval extends Component {
 	}
 }
 
+// Componente de funcional
+// const Interval = ({ counter }) => {
+// 	useEffect(() => {
+// 		const i = setInterval(() => console.log(counter), 1000);
+// 		return () => clearInterval(i); // Se desuscribe el intervalo cuando la dependencia cambia.
+// 	}, [counter]);
+
+// 	return <p>Intervalo</p>;
+// };
+
+// Aplicación funcional
 const App = () => {
 	const [counter, increase] = useCounter(0);
 

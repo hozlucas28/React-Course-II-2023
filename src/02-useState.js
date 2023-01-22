@@ -5,12 +5,23 @@
  * 	2° = Deben llamarse en un componente de React o en Hook personalizado.
  * 	3° = Deben ser llamados en el nivel más alto del componente, idealmente
  * 		 en la primer línea del mismo.
- * 	4° = Cuando creemos un Hook personalizado se recomienda que este comience
- * 		 con <use...>.
+ * 	4° = Cuando creemos un Hook personalizado debe comenzar con <use...>.
 -------------------------------------------------------------------------- */
 
 import { useState } from 'react';
 
+// Hook personalizado
+const useCounter = (start) => {
+	const [counter, setCounter] = useState(start);
+
+	const increase = () => {
+		setCounter(counter + 1);
+	};
+
+	return [counter, increase];
+};
+
+// Componente de clase
 // class App extends Component {
 // 	state = {
 // 		counter: 0
@@ -30,17 +41,7 @@ import { useState } from 'react';
 // 	}
 // }
 
-// Hook personalizado
-const useCounter = (start) => {
-	const [counter, setCounter] = useState(start);
-
-	const increase = () => {
-		setCounter(counter + 1);
-	};
-
-	return [counter, increase];
-};
-
+// Componente funcional
 const App = () => {
 	const [counter, increase] = useCounter(0);
 

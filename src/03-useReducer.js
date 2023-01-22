@@ -1,4 +1,17 @@
-import { useReducer, useState } from 'react';
+/* --------------------------------------------------------------------------
+ * APUNTES:
+ * 		   En este archivo se demuestra un caso de uso del junto <useState>
+ * 		   con <useReducer>.
+ *
+ *
+ * IMPORTANTE:
+ *  			  - <useReducer> = Se trata de un <useState> que recibe una
+ * 								   función que ejecuta la lógica y un estado
+ * 								   inicial, se utiliza cuando la lógica a
+ * 								   ejecutar es compleja para usar <useState>.
+-------------------------------------------------------------------------- */
+
+import { useState, useReducer } from 'react';
 
 const start = { counter: 0 };
 
@@ -6,25 +19,21 @@ const reducer = (state, action) => {
 	switch (action.type.toUpperCase()) {
 		case 'INCREASE':
 			return { counter: state.counter + 1 };
-			break;
 
 		case 'DECREASE':
 			return { counter: state.counter - 1 };
-			break;
 
 		case 'SET':
 			return { counter: action.payload };
-			break;
 
 		default:
 			return state;
-			break;
 	}
 };
 
 const App = () => {
-	const [state, dispatch] = useReducer(reducer, start);
 	const [value, setValue] = useState(0);
+	const [state, dispatch] = useReducer(reducer, start);
 
 	return (
 		<div>

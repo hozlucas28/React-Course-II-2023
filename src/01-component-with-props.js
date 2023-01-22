@@ -3,10 +3,6 @@
  * 		   Las funciones puras son aquellas que siempre me retornan los
  * 		   mismo, mientras que las impuras no aseguran un retorno, como lo
  * 		   seria una API que puede llegar a fallar y no retornar nada.
- *
- *
- * IMPORTANTE:
- *  			  - XXX.
 -------------------------------------------------------------------------- */
 
 const MyComponent = ({ myProp }) => {
